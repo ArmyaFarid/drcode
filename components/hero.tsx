@@ -5,12 +5,19 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { portfolioConfig } from "@/config/portfolio"
 
 export function Hero() {
-  const scrollToAbout = () => {
+  const scrollToAbout : any = () => {
     const element = document.getElementById("about")
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  const scrollToProject = (): void => {
+    const element = document.getElementById("projects");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const { personal, social } = portfolioConfig
 
@@ -31,13 +38,13 @@ export function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">
-            {personal.title} from <span className="text-primary font-semibold">{personal.country}</span>
+            {personal.title} | <span className="text-primary font-semibold">{personal.title2}</span>
           </p>
 
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto text-pretty">{personal.tagline}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="text-lg px-8 py-3" onClick={scrollToAbout}>
+            <Button size="lg" className="text-lg px-8 py-3" onClick={scrollToProject}>
               View My Work
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>

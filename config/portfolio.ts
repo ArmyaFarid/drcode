@@ -4,6 +4,7 @@ export const portfolioConfig = {
     name: "Farid Armya",
     fullName: "Farid Armya Ben BAKOUAN",
     title: "Full Stack Developer",
+    title2: "AI Researcher",
     location: "Chicoutimi, Canada",
     country: "Canada",
     phone: "+1 581 447 0142",
